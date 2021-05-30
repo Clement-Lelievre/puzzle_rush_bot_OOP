@@ -2,7 +2,7 @@
 
 # My puzzle-rush bot
 
-This repo contains the OOP implementation of my ![puzzle rush bot](https://github.com/Clement-Lelievre/puzzle_rush_bot)
+This repo contains my OOP implementation of my ![puzzle rush bot](https://github.com/Clement-Lelievre/puzzle_rush_bot)
 
 ![](https://github.com/Clement-Lelievre/puzzle_rush_bot/blob/main/youtube-video-gif.gif)   
 

@@ -2,13 +2,15 @@
 
 # My puzzle-rush bot
 
+This repo contains the OOP implementation of my ![puzzle rush bot](https://github.com/Clement-Lelievre/puzzle_rush_bot)
+
 ![](https://github.com/Clement-Lelievre/puzzle_rush_bot/blob/main/youtube-video-gif.gif)   
 
 ![](https://github.com/Clement-Lelievre/puzzle_rush_bot/blob/main/scores_screenshots/2021-05-19_12-56-23.png)   
 
 ## Description 
 
-A bot coded in Python that plays puzzle rush on chess.com.
+A bot coded in Python that plays puzzle rush on chess.com. 
 
 It performs the following actions:
 - opens a browser (Firefox)
@@ -39,7 +41,7 @@ There is still much room for improvement as this is only a first version.
 ## Files and directories
 
 - The main file is obvisouly main.py => just run *python main.py*
-- bot_functions.py contains all the tailored functions that I created
+- bot.py contains the class **PuzzleRushBot** that has all the tailored functions I created
 - stockfish_13_win_x64_avx2.exe is the chess engine
 - scores_screenshots is the directory where screenshots of scores are saved
 

@@ -41,7 +41,7 @@ There is still much room for improvement as this is only a first version.
 ## Files and directories
 
 - The main file is obvisouly main.py => just run *python main.py*
-- bot.py contains the class **PuzzleRushBot** that has all the tailored functions I created
+- bot.py contains the class **PuzzleRushBot** that has all the tailored methods I created
 - stockfish_13_win_x64_avx2.exe is the chess engine
 - scores_screenshots is the directory where screenshots of scores are saved
 

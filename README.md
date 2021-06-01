@@ -44,16 +44,19 @@ There is still much room for improvement as this is only a first version.
 
 ## Files and directories
 
-- The main file is obvisouly main.py => just run *python main.py*
+- The main file is obvisouly main.py => just run
+``` bash
+python main.py
+```
 - bot.py contains the class **PuzzleRushBot** that has all the tailored methods I created
 - stockfish_13_win_x64_avx2.exe is the chess engine
 - scores_screenshots is the directory where screenshots of scores are saved
 
 ## Steps required to install the project
 
-- the firefox driver for Selenium (this requires to add Geckodriver to PATH) (or any compatible browser of your choice)
+- the firefox driver for Selenium (this requires to add Geckodriver to PATH)
 - the stockfish engine executable (to be placed in the same directory as the main Python file)
-- ``` bash
+ ``` bash
 pip install -r requirements.txt
 ```
 

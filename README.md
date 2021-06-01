@@ -6,7 +6,7 @@ This repo contains my OOP implementation of my ![puzzle rush bot](https://github
 
 ![](https://github.com/Clement-Lelievre/puzzle_rush_bot_OOP/blob/master/youtube-video-gif.gif)   
 
-![](https://github.com/Clement-Lelievre/puzzle_rush_bot_OOP/blob/main/scores_screenshots/2021-06-01_10-05-06.png)   
+![](https://github.com/Clement-Lelievre/puzzle_rush_bot_OOP/blob/master/scores_screenshots/2021-06-01_10-05-06.png)   
 
 ## Description 
 

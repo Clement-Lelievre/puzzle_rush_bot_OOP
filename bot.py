@@ -12,7 +12,6 @@ import datetime
 # defining a few variables that'll be needed thereafter
 color_dict = {"w": True, "b": False}
 type_dict = {"p": 1, "n": 2, "b": 3, "r": 4, "q": 5, "k": 6}
-driver = webdriver.Firefox()
 
 
 def get_squares_dict():
@@ -39,7 +38,7 @@ class PuzzleRushBot():
         return creds[0], creds[1]
 
 
-    def login(self, email, password):
+    def login(self, email, password, driver):
         driver.get("https://www.chess.com/login")
         driver.maximize_window()
         driver.fullscreen_window()  # this is like pressing the shortcut key F11
@@ -109,7 +108,7 @@ class PuzzleRushBot():
             pass
         sleep(5)  # this leaves time for a human to click potential additional banners
         
-    def click_play(self):
+    def click_play(self, driver):
         play_button = driver.find_element_by_class_name(
             "ui_v5-button-component.ui_v5-button-primary.ui_v5-button-large.ui_v5-button-full")
         play_button.click()
@@ -120,7 +119,7 @@ class PuzzleRushBot():
         except:
             pass
         
-    def get_html(self):
+    def get_html(self, driver):
         return BeautifulSoup(driver.page_source, "html.parser")
 
     def fill_pieces(self, stuff):
@@ -205,10 +204,10 @@ class PuzzleRushBot():
             1
         )  # this one is crucial to avoid the error "engine process died unexpectedly (exit code: 3221225477)"
     
-    def make_screenshot(self):
+    def make_screenshot(self, driver):
         now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         screenshot_name = f"scores_screenshots/{now}.png"
         driver.save_screenshot(screenshot_name)
 
-    def closedriver(self):
+    def closedriver(self, driver):
         driver.quit()

@@ -11,6 +11,9 @@ This repo contains my OOP implementation of my ![puzzle rush bot](https://github
 ## Description 
 
 A bot coded in Python that plays puzzle rush on chess.com. 
+Puzzle rush is a popular game where the player has to solve as many chess puzzles in exactly 5 minutes as possible. 
+Currently the best humans on the planet perform at about 50 to 55 puzzles.
+
 
 It performs the following actions:
 - opens a browser (Firefox)
@@ -37,6 +40,7 @@ Launched via Powershell.
 There is still much room for improvement as this is only a first version. 
 - for example, using WebDriverWait... in selenium would be better than time.sleep() as it i more robust
 - I noticed that my program is faster at making the first move of each challenge than the remaining moves and cannot understand why yet
+- -generally speaking, I'm sure the program can be made faster
 
 ## Files and directories
 

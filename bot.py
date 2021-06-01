@@ -9,23 +9,6 @@ import pyautogui  # for mouse clicking when it is inconvenient to do so with Sel
 from time import *
 import datetime
 
-# defining a few variables that'll be needed thereafter
-color_dict = {"w": True, "b": False}
-type_dict = {"p": 1, "n": 2, "b": 3, "r": 4, "q": 5, "k": 6}
-
-
-def get_squares_dict():
-        """Creates a dictionary where the conversion is made between Stockfish square notation and chessdotcom HTML square notation"""
-        squares_dict = {}
-        columns = ["a", "b", "c", "d", "e", "f", "g", "h"]
-        for row in range(1, 9):
-            for letter in columns:
-                squares_dict[letter + str(row)] = (
-                    "square-" + str(columns.index(letter) + 1) + str(row)
-                )
-        return squares_dict, list(squares_dict.values())
-squares_dict, l = get_squares_dict()
-
 class PuzzleRushBot():
     '''The blueprint for the bot that plays puzzle rush'''
     # def __init__(self):
@@ -211,3 +194,21 @@ class PuzzleRushBot():
 
     def closedriver(self, driver):
         driver.quit()
+        
+        
+# defining a few variables that'll be needed in the main file
+color_dict = {"w": True, "b": False}
+type_dict = {"p": 1, "n": 2, "b": 3, "r": 4, "q": 5, "k": 6}
+
+
+def get_squares_dict():
+        """Creates a dictionary where the conversion is made between Stockfish square notation and chessdotcom HTML square notation"""
+        squares_dict = {}
+        columns = ["a", "b", "c", "d", "e", "f", "g", "h"]
+        for row in range(1, 9):
+            for letter in columns:
+                squares_dict[letter + str(row)] = (
+                    "square-" + str(columns.index(letter) + 1) + str(row)
+                )
+        return squares_dict, list(squares_dict.values())
+squares_dict, l = get_squares_dict()

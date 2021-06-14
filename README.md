@@ -17,10 +17,25 @@ Currently the best humans on the planet perform at about 50 to 55 puzzles.
 
 It performs the following actions:
 - opens a browser (Firefox)
-- visits chess.com, removes annoying banners then logs in (you need your own credentials)
+- visits chess.com, removes annoying banners then logs in (you need your own credentials*)
 - visits the puzzle rush page and clicks "Play"
 - cracks puzzles one after the other* (sometimes it might fail a problem)
 - once the 5 minutes countdown elapsed or if game aborted due 3 failures, takes a screenshot of its score and saves it locally in the appropriate folder
+
+Do not forget to include your own chess.com credentials else below method will fail:
+
+```python
+class PuzzleRushBot():
+    '''The blueprint for the bot that plays puzzle rush'''
+    # def __init__(self):
+    #     pass # this bot has many methods but does not really require attributes
+
+    def get_credentials(self):
+        with open("credentials.txt") as f:
+            content = f.readlines()
+        creds = [line.strip() for line in content if not "#" in line]
+        return creds[0], creds[1]
+```
 
 ## * Here is how it proceeds to solve puzzles:
 It loops over the following workflow:
